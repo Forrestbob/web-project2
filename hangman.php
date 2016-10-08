@@ -3,7 +3,7 @@
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="project2.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
 <title>HANGMAN</title>
 </head>
 
