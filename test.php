@@ -53,6 +53,9 @@ if(!isset($_SESSION['hangs'])){
 	
 	if ($contains == false){
 		$_SESSION['hangs']++;
+		if ($_SESSION['hangs'] == 6){
+			$_SESSION['losses']++;
+		}
 	}
 	
 	
@@ -69,6 +72,15 @@ if(!isset($_SESSION['hangs'])){
 <body>
 
 <h1><?php echo $topicName; ?></h1>
+
+
+Wins:
+<?php echo $_SESSION['wins'];?><br>
+			
+Losses:
+<?php echo $_SESSION['losses'];?><br>
+
+<a href="main.php?loss=loss">Forfeit (loss)</a><br>
 
 <img src="images/Hangman-<?php echo $_SESSION['hangs'];?>" alt="hangman"><br>
 <?php
