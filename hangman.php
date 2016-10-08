@@ -1,3 +1,9 @@
+<?php
+	session_start();
+
+//$_SESSION['wins']+=2;
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -41,27 +47,17 @@
 
 		</div>
 
-		<div class="left" id="subnav">
 
-			<h1>TOPICS</h1>
-			<ul>
-				<li><a href="index.html">Cool Professors</a></li>
-				<li><a href="index.html">GSU Buildings</a></li>
-				<li><a href="index.html">Legends</a></li>
-				<li><a href = "index.html"> Unprofitable Degrees </a></li>
-			</ul>
-
-		</div>
 		<div class="right" id="main_right">
 
 		<div class="padded">
 			
-			<h4>SCORE:</h4>
-			<h5>Wins</h5>
-			<p>5</p>
+			<h4>SCORE</h4>
+			<h5>Wins:</h5>
+			<p><?php echo $_SESSION['wins'];?></p>
 			
-			<h5>Losses</h5>
-			<p>3847923</p>
+			<h5>Losses:</h5>
+			<p><?php echo $_SESSION['losses'];?></p>
 		</div>
 <p> Template credit: http://creativecommons.org/licenses/by/2.5/
 Website: http://arcsin.se/ <p>

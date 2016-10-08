@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['wins']) || !isset($_SESSION['losses'])){
+	$_SESSION['wins'] = 0;
+	$_SESSION['losses'] = 0;
+}
+//$_SESSION['wins']+=2;
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -43,12 +52,13 @@
 
 		<div class="left" id="subnav">
 
-			<h1>TOPICS</h1>
+			<h1>Choose a topic!</h1>
 			<ul>
-				<li><a href="index.html">Cool Professors</a></li>
-				<li><a href="index.html">GSU Buildings</a></li>
-				<li><a href="index.html">Legends</a></li>
-				<li><a href = "index.html"> Unprofitable Degrees </a></li>
+			<li><a href="hangman.php?topic=languages">Programming Languages</a></li>
+				<li><a href="hangman.php?topic=professors">Cool Professors</a></li>
+				<li><a href="hangman.php?topic=buildings">GSU Buildings</a></li>
+				<li><a href="hangman.php?topic=legends">Legends</a></li>
+				<li><a href = "hangman.php?topic=majors"> Unprofitable Majors</a></li>
 			</ul>
 
 		</div>
@@ -56,12 +66,12 @@
 
 		<div class="padded">
 			
-			<h4>SCORE:</h4>
-			<h5>Wins</h5>
-			<p>5</p>
+			<h4>SCORE</h4>
+			<h5>Wins:</h5>
+			<p><?php echo $_SESSION['wins'];?></p>
 			
-			<h5>Losses</h5>
-			<p>3847923</p>
+			<h5>Losses:</h5>
+			<p><?php echo $_SESSION['losses'];?></p>
 		</div>
 <p> Template credit: http://creativecommons.org/licenses/by/2.5/
 Website: http://arcsin.se/ <p>
