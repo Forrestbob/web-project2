@@ -29,8 +29,8 @@ if(!isset($_SESSION['hangs'])){
 	
 	echo "not set"; //remove
 	
-	$_SESSION['hangs'] = 0;
-	$_SESSION['current_phrase'] = "";
+	$_SESSION['hangs'] = 0;				//unset this
+	$_SESSION['current_phrase'] = "";	//unset this
 	for ($i = 0; $i < strlen($phrase); $i++){
 		if (strcmp(substr($phrase,$i,1)," ") == 0){
 			$_SESSION['current_phrase'] .= " ";
@@ -39,6 +39,23 @@ if(!isset($_SESSION['hangs'])){
 			$_SESSION['current_phrase'] .= "_";
 		}
 	}
+	$_SESSION['current_arr'] = str_split($_SESSION['current_phrase']);
+}else{
+	$letter = $_GET['letter'];
+	$contains = false;
+	
+	for ($i = 0; $i < strlen($phrase); $i++){
+		if (strcmp(substr($phrase,$i,1),$letter) == 0){
+			$contains = true;
+			$_SESSION['current_arr'][$i] = $letter;
+		}
+	}
+	
+	if ($contains == false){
+		$_SESSION['hangs']++;
+	}
+	
+	
 }
 
 
@@ -53,13 +70,13 @@ if(!isset($_SESSION['hangs'])){
 
 <h1><?php echo $topicName; ?></h1>
 
-<img src="images/Hangman-<?php echo $_SESSION['hangs'];?>" alt="Smiley face"><br>
+<img src="images/Hangman-<?php echo $_SESSION['hangs'];?>" alt="hangman"><br>
 <?php
 
-unset($_SESSION['hangs']);		//remove
+//unset($_SESSION['hangs']);		//remove
 
 echo $phrase . "<br>"; 
-echo $_SESSION['current_phrase'];
+echo implode($_SESSION['current_arr']);
 
 //echo $_GET['letter'];
 //echo "test";
@@ -71,6 +88,9 @@ echo $_SESSION['current_phrase'];
 <a href="?topic=<?php echo $topic; ?>&letter=D">D</a>
 <a href="?topic=<?php echo $topic; ?>&letter=E">E</a>
 <a href="?topic=<?php echo $topic; ?>&letter=F">F</a>
+<a href="?topic=<?php echo $topic; ?>&letter=G">G</a>
+<a href="?topic=<?php echo $topic; ?>&letter=H">H</a>
+<a href="?topic=<?php echo $topic; ?>&letter=I">I</a>
 
 </body>
 </html>
