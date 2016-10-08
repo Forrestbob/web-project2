@@ -19,7 +19,7 @@
 
 	<div class="left" id="main_left">
 
-		<div id="header">Let's play Hang Man!</div>
+		<div id="header"><img src="images/Hangman-6.png" alt="hangman6"></div>
 			
 		<div class="right" id="main">
 

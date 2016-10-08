@@ -54,11 +54,11 @@ if (!isset($_SESSION['wins']) || !isset($_SESSION['losses'])){
 
 			<h1>Choose a topic!</h1>
 			<ul>
-			<li><a href="hangman.php?topic=languages">Programming Languages</a></li>
-				<li><a href="hangman.php?topic=professors">Cool Professors</a></li>
-				<li><a href="hangman.php?topic=buildings">GSU Buildings</a></li>
-				<li><a href="hangman.php?topic=legends">Legends</a></li>
-				<li><a href = "hangman.php?topic=majors"> Unprofitable Majors</a></li>
+			<li><a href="test.php?topic=languages">Programming Languages</a></li>
+				<li><a href="test.php?topic=professors">Cool Professors</a></li>
+				<li><a href="test.php?topic=buildings">GSU Buildings</a></li>
+				<li><a href="test.php?topic=legends">Legends</a></li>
+				<li><a href = "test.php?topic=majors"> Unprofitable Majors</a></li>
 			</ul>
 
 		</div>
