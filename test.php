@@ -41,6 +41,7 @@ if(!isset($_SESSION['hangs'])){
 	}
 	$_SESSION['current_arr'] = str_split($_SESSION['current_phrase']);
 }else{
+	
 	$letter = $_GET['letter'];
 	$contains = false;
 	
@@ -51,13 +52,17 @@ if(!isset($_SESSION['hangs'])){
 		}
 	}
 	
+	if(strcmp($phrase,implode($_SESSION['current_arr'])) == 0){
+		$_SESSION['wins']++;
+		echo "play again?";
+	}
+	
 	if ($contains == false){
 		$_SESSION['hangs']++;
 		if ($_SESSION['hangs'] == 6){
 			$_SESSION['losses']++;
 		}
 	}
-	
 	
 }
 
@@ -103,6 +108,23 @@ echo implode($_SESSION['current_arr']);
 <a href="?topic=<?php echo $topic; ?>&letter=G">G</a>
 <a href="?topic=<?php echo $topic; ?>&letter=H">H</a>
 <a href="?topic=<?php echo $topic; ?>&letter=I">I</a>
+<a href="?topic=<?php echo $topic; ?>&letter=J">J</a>
+<a href="?topic=<?php echo $topic; ?>&letter=K">K</a>
+<a href="?topic=<?php echo $topic; ?>&letter=L">L</a>
+<a href="?topic=<?php echo $topic; ?>&letter=M">M</a>
+<a href="?topic=<?php echo $topic; ?>&letter=N">N</a>
+<a href="?topic=<?php echo $topic; ?>&letter=O">O</a>
+<a href="?topic=<?php echo $topic; ?>&letter=P">P</a>
+<a href="?topic=<?php echo $topic; ?>&letter=Q">Q</a>
+<a href="?topic=<?php echo $topic; ?>&letter=R">R</a>
+<a href="?topic=<?php echo $topic; ?>&letter=S">S</a>
+<a href="?topic=<?php echo $topic; ?>&letter=T">T</a>
+<a href="?topic=<?php echo $topic; ?>&letter=U">U</a>
+<a href="?topic=<?php echo $topic; ?>&letter=V">V</a>
+<a href="?topic=<?php echo $topic; ?>&letter=W">W</a>
+<a href="?topic=<?php echo $topic; ?>&letter=X">X</a>
+<a href="?topic=<?php echo $topic; ?>&letter=Y">Y</a>
+<a href="?topic=<?php echo $topic; ?>&letter=Z">Z</a>
 
 </body>
 </html>
