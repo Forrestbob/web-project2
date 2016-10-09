@@ -123,7 +123,7 @@ img {
 }
 
 #forfeit {
-    background-color: #015249; /* Green */
+    background-color: #015249;
     border: none;
     color: white;
     padding: 8px 24px;
@@ -141,7 +141,7 @@ img {
 }
 
 #forfeit:hover {
-	background-color: #A5A5AF; /* Green */
+	background-color: #A5A5AF;
     color: black;
 }
 
@@ -183,9 +183,27 @@ img {
 	padding-left: 38px;
 }
 
+.replay {
+	background-color: #015249;
+    border: none;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+	border-radius: 5px;
+    color: white;
+	margin-top: 30px;
+}
 
-
-
+.replay:hover {
+	background-color: #A5A5AF;
+    color: black;
+}
 
 
 

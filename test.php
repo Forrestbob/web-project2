@@ -27,7 +27,7 @@ switch ($topic){
 
 if(!isset($_SESSION['hangs'])){
 	
-	echo "not set"; //remove
+//	echo "not set"; //remove
 	
 	$_SESSION['hangs'] = 0;
 	$_SESSION['current_phrase'] = "";
@@ -114,7 +114,7 @@ echo implode($_SESSION['current_arr']);
 //echo "test";
 echo "<br>";
 
-if (!isset($winlose)){
+if (!isset($winlose)){ //change to if win or lose isset
 	for ($i = 0; $i < count($_SESSION['alphabet']); $i++){
 		echo "<a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a> ";
 	}
