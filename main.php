@@ -27,10 +27,10 @@ unset($_SESSION['alphabet']);
 		<h2>Choose a topic</h2>
 		<table id = "topics">
 			<tr><td><a href="hangman.php?topic=languages">Programming Languages</a></td></tr>
-			<tr><td><a href="#">Cool Professors</a></td></tr>
-			<tr><td><a href="#">GSU Buildings</a></td></tr>
-			<tr><td><a href="#">Unprofitable Majors</a></td></tr>
-			<tr><td><a href="#">Legends</a></td></tr>
+			<tr><td><a href="hangman.php?topic=professors">Cool Professors</a></td></tr>
+			<tr><td><a href="hangman.php?topic=buildings">GSU Buildings</a></td></tr>
+			<tr><td><a href="hangman.php?topic=majors">Unprofitable Majors</a></td></tr>
+			<tr><td><a href="hangman.php?topic=legends">Legends</a></td></tr>
 		</table>
 		
 		<div id = "score">

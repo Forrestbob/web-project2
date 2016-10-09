@@ -1,6 +1,17 @@
 body {
 	background-color: #57BC90;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background: 
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+	radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+	linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+	background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+	background-color: #840b2a;
+	background-attachment: fixed;
 }
 
 #body, #body2 {
@@ -9,7 +20,7 @@ body {
 	text-align: center;
 	margin-top: 50px;
 	border: #015249 10px solid;
-	
+	border-radius: 15px;
 	width: 800px;
 	height: 500px;
 }
@@ -126,6 +137,7 @@ img {
 	border-radius: 5px;
     color: white;
     margin-top: -10px;
+	margin-left: -20px;
 }
 
 #forfeit:hover {
@@ -142,7 +154,7 @@ img {
 	font-size: 20px;
 	font-weight: bold;
 	border: gray 2px solid;
-	border-radius: 2px;
+	border-radius: 5px;
 	background-color: white;
 	height: 37px;
 	width: 37px;
