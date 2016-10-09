@@ -26,18 +26,18 @@ unset($_SESSION['alphabet']);
 		<h1>HANGMAN!</h2>
 		<h2>Choose a topic</h2>
 		<table id = "topics">
-			<tr><td>Programming Languages</td></tr>
-			<tr><td>Cool Professors</td></tr>
-			<tr><td>GSU Buildings</td></tr>
-			<tr><td>Unprofitable Majors</td></tr>
-			<tr><td>Legends</td></tr>
+			<tr><td><a href="#">Programming Languages</a></td></tr>
+			<tr><td><a href="#">Cool Professors</a></td></tr>
+			<tr><td><a href="#">GSU Buildings</a></td></tr>
+			<tr><td><a href="#">Unprofitable Majors</a></td></tr>
+			<tr><td><a href="#">Legends</a></td></tr>
 		</table>
 		
 		<div id = "score">
-			<h4>Wins:</h4>
-			<p><?php echo $_SESSION['wins'];?></p>
-			<h4>Losses:</h4>
-			<p><?php echo $_SESSION['losses'];?></p>
+			<p>Wins:
+			<div class = "bold"><?php echo $_SESSION['wins'];?></div></p>
+			<p>Losses:
+			<div class = "bold"><?php echo $_SESSION['losses'];?></div></p>
 		</div>
 	</div>
 </body>
