@@ -1,0 +1,40 @@
+body {
+	background-color: #77C9D4;
+}
+
+#body {
+	
+	background-color: #57BC90;
+	margin: auto;
+	margin-top: 50px;
+	border: #015249 10px solid;
+	border-radius: 20px;
+	width: 800px;
+	height: 500px;
+}
+
+h1, h2 {
+	text-align: center;
+	color: white;
+}
+
+#topics {
+	margin: auto;
+	color: white;
+	border-spacing: 0;
+	border-radius: 10px;
+	/*background-color: #015249;*/
+	border-collapse: separate;
+	border-spacing: 0 .5em;
+}
+
+#topics td {
+	padding: 15px 30px 15px 30px;
+
+	background-color: #015249;
+	border-radius: 10px;
+}
+
+#score {
+	clear: right;
+}
