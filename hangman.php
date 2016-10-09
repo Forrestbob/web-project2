@@ -45,9 +45,9 @@ switch ($topic){
 			<div class = "bold"><?php echo $_SESSION['wins'];?></div></p>
 			<p>Losses:
 			<div class = "bold"><?php echo $_SESSION['losses'];?></div></p>
-			<button id = "forfeit">Forfeit</button>
+			<a href="main.php?loss=loss"><button id = "forfeit">Forfeit</button></a>
 	</div>
-	<div id = "phrase">_O_ BA__ ___R_</div>
+	<div id = "phrase">FOO BA__ ___R_</div>
 	
 	<table id = "keyboard">
 		<tr>

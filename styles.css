@@ -9,7 +9,7 @@ body {
 	text-align: center;
 	margin-top: 50px;
 	border: #015249 10px solid;
-	border-radius: 15px;
+	
 	width: 800px;
 	height: 500px;
 }
@@ -60,7 +60,6 @@ body {
 	
 	display:block;
 	color:#FFFFFF;
-	text-decoration:none;
 	transition-duration: 0.3s;
 }
 
@@ -76,13 +75,13 @@ body {
 	vertical-align: top;
 	text-align: left;
 	margin-left: 50px;
-	margin-top: -20px;
+	margin-top: -10px;
 }
 
 #score p {
 	font-weight: bold;
 	
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .bold {
@@ -93,6 +92,7 @@ body {
 }
 
 #body2 h2 {
+	margin-top: 10px;
 	color: white;
 	font-family: "Arial Black", Gadget, sans-serif;
 	
@@ -106,9 +106,9 @@ img {
 #phrase {
 	font-size: 40px;
 	font-weight: 700px;
-	letter-spacing: 4px;
+	letter-spacing: 5px;
 	font-family: "Lucida Console";
-	margin-top: -5px;
+	margin-top: -15px;
 }
 
 #forfeit {
@@ -135,7 +135,7 @@ img {
 
 #keyboard {
 	margin: auto;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 #keyboard td{
@@ -148,13 +148,27 @@ img {
 	width: 37px;
 }
 
-tr:nth-child(2) {
-	margin-left: 5px;
-	background-color: red;
+#keyboard a {
+	text-decoration:none;
+	color: black;
+	display:block;
 }
 
+#keyboard td:hover {
+	background-color: #cccccc;
+}
 
+#keyboard tr {
+	display: block;
+}
 
+#keyboard tr:nth-of-type(2) {
+	padding-left: 12px;
+}
+
+#keyboard tr:nth-of-type(3) {
+	padding-left: 38px;
+}
 
 
 
