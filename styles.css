@@ -146,6 +146,7 @@ img {
 	background-color: white;
 	height: 37px;
 	width: 37px;
+	transition-duration: 0.2s;
 }
 
 #keyboard a {
