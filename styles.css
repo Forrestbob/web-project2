@@ -3,8 +3,7 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#body {
-	
+#body, #body2 {
 	background-color: #77C9D4;
 	margin: auto;
 	text-align: center;
@@ -15,18 +14,18 @@ body {
 	height: 500px;
 }
 
-h1 {
+#body h1 {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 50px;
 	margin-top: 5px;
 }
 
-h2 {
+#body h2 {
 	margin-top: -10px;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
 
-h1, h2 {
+#body h1, #body h2 {
 	text-align: center;
 	color: white;
 	/*font-family: "Arial Black", Gadget, sans-serif;*/
@@ -91,3 +90,19 @@ h1, h2 {
 	font-size: 25px;
 
 }
+
+#body2 h2 {
+	color: white;
+	font-family: "Arial Black", Gadget, sans-serif;
+	
+}
+
+img {
+	margin-right: -20px;
+}
+
+#phrase {
+	font-weight: 700px;
+	font-family: "Lucida Console";
+}
+

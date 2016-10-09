@@ -23,10 +23,10 @@ unset($_SESSION['alphabet']);
 
 <body>
 	<div id = "body">
-		<h1>HANGMAN!</h2>
+		<h1>H A N G M A N !</h2>
 		<h2>Choose a topic</h2>
 		<table id = "topics">
-			<tr><td><a href="#">Programming Languages</a></td></tr>
+			<tr><td><a href="hangman.php?topic=languages">Programming Languages</a></td></tr>
 			<tr><td><a href="#">Cool Professors</a></td></tr>
 			<tr><td><a href="#">GSU Buildings</a></td></tr>
 			<tr><td><a href="#">Unprofitable Majors</a></td></tr>
