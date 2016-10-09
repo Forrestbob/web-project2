@@ -4,6 +4,9 @@ if (!isset($_SESSION['wins']) || !isset($_SESSION['losses'])){
 	$_SESSION['wins'] = 0;
 	$_SESSION['losses'] = 0;
 }
+if (isset($_GET['loss'])){
+	$_SESSION['losses']++;
+}
 
 unset($_SESSION['hangs']);
 unset($_SESSION['current_phrase']);
