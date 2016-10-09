@@ -45,8 +45,46 @@ switch ($topic){
 			<div class = "bold"><?php echo $_SESSION['wins'];?></div></p>
 			<p>Losses:
 			<div class = "bold"><?php echo $_SESSION['losses'];?></div></p>
+			<button id = "forfeit">Forfeit</button>
 	</div>
-	<div id = "phrase"><h2>___ BA__ _____</h2></div>
+	<div id = "phrase">_O_ BA__ ___R_</div>
+	
+	<table id = "keyboard">
+		<tr>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=A">A</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=B">B</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=C">C</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=D">D</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=E">E</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=F">F</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=G">G</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=H">H</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=I">I</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=J">J</a></td>
+		</tr>
+		<tr>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=K">K</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=L">L</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=M">M</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=N">N</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=O">O</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=P">P</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=Q">Q</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=R">R</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=S">S</a></td>
+		</tr>
+		<tr>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=T">T</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=U">U</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=V">V</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=W">W</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=X">X</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=Y">Y</a></td>
+			<td><a href="?topic=<?php echo $topic; ?>&letter=Z">Z</a></td>
+		</tr>
+	</table>
+	
+	
 </div>
 
 

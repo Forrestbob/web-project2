@@ -61,6 +61,7 @@ body {
 	display:block;
 	color:#FFFFFF;
 	text-decoration:none;
+	transition-duration: 0.3s;
 }
 
 #topics a:hover {
@@ -75,7 +76,7 @@ body {
 	vertical-align: top;
 	text-align: left;
 	margin-left: 50px;
-
+	margin-top: -20px;
 }
 
 #score p {
@@ -99,10 +100,65 @@ body {
 
 img {
 	margin-right: -20px;
+	margin-top: -20px;
 }
 
 #phrase {
+	font-size: 40px;
 	font-weight: 700px;
+	letter-spacing: 4px;
 	font-family: "Lucida Console";
+	margin-top: -5px;
 }
+
+#forfeit {
+    background-color: #015249; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+	border-radius: 5px;
+    color: white;
+    margin-top: -10px;
+}
+
+#forfeit:hover {
+	background-color: #A5A5AF; /* Green */
+    color: black;
+}
+
+#keyboard {
+	margin: auto;
+	margin-top: 10px;
+}
+
+#keyboard td{
+	font-size: 20px;
+	font-weight: bold;
+	border: gray 2px solid;
+	border-radius: 2px;
+	background-color: white;
+	height: 37px;
+	width: 37px;
+}
+
+tr:nth-child(2) {
+	margin-left: 5px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
 
