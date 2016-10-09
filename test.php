@@ -13,7 +13,7 @@ switch ($topic){
 		break;
 	case "buildings":
 		$topicName = "GSU Buildings";
-		$phrase = "URBAN LIFE";
+		$phrase = "PETIT SCIENCE CENTER";
 		break;
 	case "legends":
 		$topicName = "Legends";
@@ -31,6 +31,7 @@ if(!isset($_SESSION['hangs'])){
 	
 	$_SESSION['hangs'] = 0;				//unset this
 	$_SESSION['current_phrase'] = "";	//unset this
+	$_SESSION['alphabet'] = array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
 	for ($i = 0; $i < strlen($phrase); $i++){
 		if (strcmp(substr($phrase,$i,1)," ") == 0){
 			$_SESSION['current_phrase'] .= " ";
@@ -45,6 +46,12 @@ if(!isset($_SESSION['hangs'])){
 	$letter = $_GET['letter'];
 	$contains = false;
 	
+	for ($i = 0; $i < count($_SESSION['alphabet']); $i++){
+		if (strcmp($letter,$_SESSION['alphabet'][$i]) == 0){
+			$_SESSION['alphabet'][$i] = "&nbsp;";
+		}
+	}
+	
 	for ($i = 0; $i < strlen($phrase); $i++){
 		if (strcmp(substr($phrase,$i,1),$letter) == 0){
 			$contains = true;
@@ -54,13 +61,16 @@ if(!isset($_SESSION['hangs'])){
 	
 	if(strcmp($phrase,implode($_SESSION['current_arr'])) == 0){
 		$_SESSION['wins']++;
-		echo "play again?";
+		$winlose = true;
+		echo "<a href='main.php'>You win! Play again?</a>";
 	}
 	
 	if ($contains == false){
 		$_SESSION['hangs']++;
 		if ($_SESSION['hangs'] == 6){
 			$_SESSION['losses']++;
+			$winlose = true;
+			echo "<a href='main.php'>Tough luck. Play again?</a>";
 		}
 	}
 	
@@ -87,7 +97,7 @@ Losses:
 
 <a href="main.php?loss=loss">Forfeit (loss)</a><br>
 
-<img src="images/Hangman-<?php echo $_SESSION['hangs'];?>" alt="hangman"><br>
+<img src="images/Hangman-<?php echo min(6, $_SESSION['hangs']);?>" alt="hangman"><br>
 <?php
 
 //unset($_SESSION['hangs']);		//remove
@@ -97,34 +107,15 @@ echo implode($_SESSION['current_arr']);
 
 //echo $_GET['letter'];
 //echo "test";
+echo "<br>";
+
+if (!isset($winlose)){
+	for ($i = 0; $i < count($_SESSION['alphabet']); $i++){
+		echo "<a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a> ";
+	}
+}
+
 ?>
-<br>
-<a href="?topic=<?php echo $topic; ?>&letter=A">A</a>
-<a href="?topic=<?php echo $topic; ?>&letter=B">B</a>
-<a href="?topic=<?php echo $topic; ?>&letter=C">C</a>
-<a href="?topic=<?php echo $topic; ?>&letter=D">D</a>
-<a href="?topic=<?php echo $topic; ?>&letter=E">E</a>
-<a href="?topic=<?php echo $topic; ?>&letter=F">F</a>
-<a href="?topic=<?php echo $topic; ?>&letter=G">G</a>
-<a href="?topic=<?php echo $topic; ?>&letter=H">H</a>
-<a href="?topic=<?php echo $topic; ?>&letter=I">I</a>
-<a href="?topic=<?php echo $topic; ?>&letter=J">J</a>
-<a href="?topic=<?php echo $topic; ?>&letter=K">K</a>
-<a href="?topic=<?php echo $topic; ?>&letter=L">L</a>
-<a href="?topic=<?php echo $topic; ?>&letter=M">M</a>
-<a href="?topic=<?php echo $topic; ?>&letter=N">N</a>
-<a href="?topic=<?php echo $topic; ?>&letter=O">O</a>
-<a href="?topic=<?php echo $topic; ?>&letter=P">P</a>
-<a href="?topic=<?php echo $topic; ?>&letter=Q">Q</a>
-<a href="?topic=<?php echo $topic; ?>&letter=R">R</a>
-<a href="?topic=<?php echo $topic; ?>&letter=S">S</a>
-<a href="?topic=<?php echo $topic; ?>&letter=T">T</a>
-<a href="?topic=<?php echo $topic; ?>&letter=U">U</a>
-<a href="?topic=<?php echo $topic; ?>&letter=V">V</a>
-<a href="?topic=<?php echo $topic; ?>&letter=W">W</a>
-<a href="?topic=<?php echo $topic; ?>&letter=X">X</a>
-<a href="?topic=<?php echo $topic; ?>&letter=Y">Y</a>
-<a href="?topic=<?php echo $topic; ?>&letter=Z">Z</a>
 
 </body>
 </html>

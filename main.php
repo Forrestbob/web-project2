@@ -10,6 +10,8 @@ if (isset($_GET['loss'])){
 
 unset($_SESSION['hangs']);
 unset($_SESSION['current_phrase']);
+unset($_SESSION['alphabet']);
+
 //$_SESSION['wins']+=2;
 ?>
 
