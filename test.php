@@ -29,8 +29,8 @@ if(!isset($_SESSION['hangs'])){
 	
 	echo "not set"; //remove
 	
-	$_SESSION['hangs'] = 0;				//unset this
-	$_SESSION['current_phrase'] = "";	//unset this
+	$_SESSION['hangs'] = 0;
+	$_SESSION['current_phrase'] = "";
 	$_SESSION['alphabet'] = array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
 	for ($i = 0; $i < strlen($phrase); $i++){
 		if (strcmp(substr($phrase,$i,1)," ") == 0){
@@ -83,6 +83,11 @@ if(!isset($_SESSION['hangs'])){
 <html>
 <head>
 <title>Test page</title>
+<style>
+*{
+	font-family: "Lucida Console", Monaco, monospace;
+}
+</style>
 </head>
 <body>
 
