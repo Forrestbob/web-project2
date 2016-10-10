@@ -111,15 +111,30 @@ if(!isset($_SESSION['hangs'])){
 		<?php 
 		if (!isset($win) && !isset($lose)){
 			for ($i = 0; $i < 10; $i++){
-				echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				if (strcmp($_SESSION['alphabet'][$i],"&nbsp;") != 0){
+					echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				}
+				else{
+					echo "<td style = 'background-color: white;'></td>";
+				}
 			} 
 			echo "</tr><tr>";
 			for ($i = 10; $i < 19; $i++){
-				echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				if (strcmp($_SESSION['alphabet'][$i],"&nbsp;") != 0){
+					echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				}
+				else{
+					echo "<td style = 'background-color: white;'></td>";
+				}
 			} 
 			echo "</tr><tr>";
 			for ($i = 19; $i < 26; $i++){
-				echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				if (strcmp($_SESSION['alphabet'][$i],"&nbsp;") != 0){
+					echo "<td><a href='?topic=" . $topic . "&letter=". $_SESSION['alphabet'][$i] ."'>" . $_SESSION['alphabet'][$i] . "</a></td> ";
+				}
+				else{
+					echo "<td style = 'background-color: white;'></td>";
+				}
 			} 
 		}
 		else if (isset($win)) {
