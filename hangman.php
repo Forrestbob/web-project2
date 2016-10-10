@@ -94,7 +94,14 @@ if(!isset($_SESSION['hangs'])){
 			<div class = "bold"><?php echo $_SESSION['wins'];?></div></p>
 			<p>Losses:
 			<div class = "bold"><?php echo $_SESSION['losses'];?></div></p>
-			<a href="main.php?loss=loss"><button id = "forfeit">Forfeit</button></a>
+			<?php
+			if (!isset($win) && !isset($lose)){
+				echo "<a href='main.php?loss=loss'><button id = 'forfeit'>Forfeit</button></a>";
+			}
+			else {
+				echo "<button id = 'forfeit'>Forfeit</button>";
+			}
+			?>
 	</div>
 	<div id = "phrase">
 	<?php 
